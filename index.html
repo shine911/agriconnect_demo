@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
+  
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>AgriConnect Social Network</title>
 
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/owl.carousel.min.css">
@@ -23,7 +23,7 @@
         margin: 10,
         nav: true,
         autoplay: true,
-        autoplayTimeout: 1000,
+        autoplayTimeout: 3000,
         autoplayHoverPause: true,
         responsive: {
           0: {
@@ -37,141 +37,232 @@
           }
         }
       })
+
+      $(".open_menu_sub").click(function (e) { 
+        e.preventDefault();
+        $(".menu_header_sub").slideToggle();
+      });
+
+      $open = true;
+      $(".btn_menu_mobile").click(function (e) { 
+        e.preventDefault();
+        if($open === true){
+          $(".menu_header_mobile").animate({
+            left: "0px"
+          })
+          $open = false;
+        }else{
+          $(".menu_header_mobile").animate({
+            left: "-250px"
+          })
+          $open = true;
+        }
+      });
+
     })
   </script>
 
 </head>
-
+  
 <body>
-
-  <div class="bg_menu_header">
-    <div class="container">
-      <div class="menu_header_gr">
-        <div class="row dp_flex_start">
-          <div class="col-lg-1">
-            <div class="logo_header">
-              <a href="index.php">
-                <img src="img/logo_2.png" alt="">
-              </a>
+    <div class="bg_menu_header">
+      <div class="container">
+        <div class="menu_header_gr">
+          <div class="row dp_flex_start">
+            <div class="col-lg-1">
+              <div class="logo_header">
+                <a href="index.html">
+                  <img src="img/logo_2.png" alt="">
+                </a>
+              </div>
             </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="search_header">
-              <input type="text" name="txt_search_header" id="txt_search_header" placeholder="Search...">
-              <button class="btn_search"><i class="fas fa-search"></i></button>
+            <div class="col-lg-3">
+              <div class="search_header">
+                <input type="text" name="txt_search_header" id="txt_search_header" placeholder="Search...">
+                <button class="btn_search"><i class="fas fa-search"></i></button>
+              </div>
             </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="menu_header">
-              <ul>
-                <li>
-                  <a href="index.php">
-                    <span><i class="fas fa-home"></i></span>
-                    <span>Home</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    <span><i class="fas fa-building"></i></span>
-                    <span>Companies</span>
-                  </a>
-                  <div class="menu_header_sub">
-                    <ul>
-                      <li>
-                        <a href="">Companies 1</a>
-                      </li>
-                      <li>
-                        <a href="">Companies 2</a>
-                      </li>
-                      <li>
-                        <a href="">Companies 3</a>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li>
-                  <a href="">
-                    <span><i class="fas fa-building"></i></span>
-                    <span>Projects</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    <span><i class="fas fa-user-friends"></i></span>
-                    <span>Profiles</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    <span><i class="fas fa-building"></i></span>
-                    <span>Josb</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    <span><i class="fas fa-envelope"></i></span>
-                    <span>Messages</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    <span><i class="fas fa-building"></i></span>
-                    <span>Notification</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-2">
-            <div class="admin_header">
-              <img src="img/user.png" alt="">
-              <a href="">John <i class="fas fa-caret-down"></i></a>
-              <div class="admin_sub_header">
+            <div class="order-2 col-6 order-lg-1">
+              <div class="menu_header">
                 <ul>
                   <li>
-                    <a href="profile.php">
-                      <span><i class="fas fa-user"></i></span>
-                      <span>Profile</span>
+                    <a href="index.html">
+                      <span><i class="fas fa-home"></i></span>
+                      <span>Home</span>
                     </a>
                   </li>
                   <li>
                     <a href="">
-                      <span><i class="fas fa-sliders-h"></i></span>
-                      <span>Settings</span>
+                      <span><i class="fas fa-building"></i></span>
+                      <span>Companies</span>
+                    </a>
+                    <div class="menu_header_sub">
+                      <ul>
+                        <li>
+                          <a href="">Companies 1</a>
+                        </li>
+                        <li>
+                          <a href="">Companies 2</a>
+                        </li>
+                        <li>
+                          <a href="">Companies 3</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="">
+                      <span><i class="fas fa-building"></i></span>
+                      <span>Projects</span>
                     </a>
                   </li>
                   <li>
                     <a href="">
-                      <span><i class="fas fa-user"></i></span>
-                      <span>Friends</span>
+                      <span><i class="fas fa-user-friends"></i></span>
+                      <span>Profiles</span>
                     </a>
                   </li>
                   <li>
                     <a href="">
-                      <span><i class="fas fa-cogs"></i></span>
-                      <span>Administrator</span>
+                      <span><i class="fas fa-building"></i></span>
+                      <span>Josb</span>
                     </a>
                   </li>
                   <li>
                     <a href="">
-                      <span><i class="fas fa-sign-out-alt"></i></span>
-                      <span>Log out</span>
+                      <span><i class="fas fa-envelope"></i></span>
+                      <span>Messages</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <span><i class="fas fa-building"></i></span>
+                      <span>Notification</span>
                     </a>
                   </li>
                 </ul>
+              </div>
+              <div class="menu_header_mobile_gr">
+                <div class="btn_menu_mobile">
+                  <a href=""><i class="fas fa-bars"></i></a>
+                </div>
+                <div class="menu_header_mobile">
+                  <div class="logo_header_mobile">
+                    <a href="index.html">
+                      <img src="img/logo_2.png" alt="">
+                    </a>
+                  </div>
+                  <ul>
+                    <li>
+                      <a href="index.html">
+                        <span><i class="fas fa-home"></i></span>
+                        <span>Home</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <span><i class="fas fa-building"></i></span>
+                        <span>Companies</span>
+                      </a>
+                      <span class="open_menu_sub"><i class="fas fa-angle-down"></i></span>
+                      <div class="menu_header_sub">
+                        <ul>
+                          <li>
+                            <a href="">Companies 1</a>
+                          </li>
+                          <li>
+                            <a href="">Companies 2</a>
+                          </li>
+                          <li>
+                            <a href="">Companies 3</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="">
+                        <span><i class="fas fa-building"></i></span>
+                        <span>Projects</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <span><i class="fas fa-user-friends"></i></span>
+                        <span>Profiles</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <span><i class="fas fa-building"></i></span>
+                        <span>Josb</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <span><i class="fas fa-envelope"></i></span>
+                        <span>Messages</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <span><i class="fas fa-building"></i></span>
+                        <span>Notification</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 order-1 order-lg-2 col-lg-2">
+              <div class="admin_header">
+                <img src="img/user.png" alt="">
+                <a href="">John <i class="fas fa-caret-down"></i></a>
+                <div class="admin_sub_header">
+                  <ul>
+                    <li>
+                      <a href="profile.html">
+                        <span><i class="fas fa-user"></i></span>
+                        <span>Profile</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <span><i class="fas fa-sliders-h"></i></span>
+                        <span>Settings</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <span><i class="fas fa-user"></i></span>
+                        <span>Friends</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <span><i class="fas fa-cogs"></i></span>
+                        <span>Administrator</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <span><i class="fas fa-sign-out-alt"></i></span>
+                        <span>Log out</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
 <div class="bg_body">
   <div class="container">
     <div class="body_gr">
       <div class="row">
-        <div class="col-lg-3">
+        <div class="col-lg-3 d-md-none d-lg-block">
           <div class="date_weather">
             <div class="weather">
               <img src="img/weather.png" alt="">
@@ -520,7 +611,7 @@
             </div>
             <div class="wiki">
               <h5>Wiki Pages</h5>
-              <a href="http://115.78.231.102:7777/mediawiki/index.php/Ng%C3%B4">
+              <a href="http://115.78.231.102:7777/mediawiki/index.html/Ng%C3%B4">
                 <img src="img/cay_ngo.png" alt="">
               </a>
             </div>
@@ -566,6 +657,10 @@
     </div>
   </div>
 </div>
+
+</body>
+
+</html>
 
 </body>
 
