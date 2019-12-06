@@ -323,7 +323,9 @@ a{
 }
 .post_sst_gr .cmt_stt .avt_stt .name_avt_stt .img_stt a img{
     width: 50px;
+    height: 50px;
     margin-right: 15px;
+    border-radius: 50%
 }
 .post_sst_gr .cmt_stt .avt_stt .name_avt_stt .name_stt a{
     font-size: 17px;
@@ -349,6 +351,10 @@ a{
     color: #7cbe5f;
     margin-bottom: 15px;
     display: inline-block;
+}
+.post_sst_gr .cmt_stt .noidung_stt img{
+    width: 100%;
+    padding-bottom: 20px;
 }
 .post_sst_gr .cmt_stt .noidung_stt .cacloaicay{
     padding-bottom: 20px;
@@ -636,8 +642,11 @@ a{
     border-radius: 50%;
 }
 .bg_info_profile .info_profile_gr .img_profile_gr .img_profile .following{
-    padding: 100px 15px 15px 15px;
+    padding: 90px 15px 15px 15px;
     border-bottom: 1px solid #e4e4e4;
+}
+.bg_info_profile .info_profile_gr .img_profile_gr .img_profile .following .name_avt_profile{
+    text-align: center;
 }
 .bg_info_profile .info_profile_gr .img_profile_gr .img_profile .following ul{
     display: flex;
@@ -765,7 +774,7 @@ a{
 }
 
 .bg_info_profile .info_profile_gr .portfolio_gr{
-    margin-top: 50px;
+    margin-top: 80px;
 }
 .bg_info_profile .info_profile_gr .portfolio_gr .setting{
     display: flex;
@@ -869,12 +878,26 @@ a{
 .bg_info_profile .info_profile_gr .info_profile .menu_profile ul li a span:first-child{
     font-size: 40px;
 }
-
-.menu_header_mobile_gr{
-    display: none;
+.btn_read_more{
+    text-align: center;
+}
+.btn_read_more a{
+    background: #7cbe5f;
+    color: #fff;
+    border-radius: 4px;
+    padding: 10px 20px;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid #7cbe5f;
+}
+.btn_read_more a:hover{
+    background: #fff;
+    color: #7cbe5f;
 }
 
-
+.menu_header_mobile, .btn_menu_mobile{
+    display: none;
+}
 
 
 @media (max-width: 1200px){
@@ -912,7 +935,7 @@ a{
         justify-content: flex-end;
         align-items: center;
     }
-    .menu_header_mobile_gr .btn_menu_mobile a{
+    .menu_header_mobile_gr .btn_menu_mobile  a{
         font-size: 23px;
         color: #fff;
     }
@@ -950,9 +973,11 @@ a{
         width: 250px;
         height: 100%;
         z-index: 10;
+        display: block;
     }
     .logo_header_mobile{
         border-bottom: 1px solid #fff;
+        padding: 10px 0;
     }
     .logo_header_mobile a{
         display: flex;
